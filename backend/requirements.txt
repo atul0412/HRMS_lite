@@ -1,5 +1,7 @@
 fastapi>=0.109,<0.115
 uvicorn[standard]>=0.27
+gunicorn>=21.2
 pymongo>=4.6
 pydantic[email-validator]>=2.5
 python-multipart>=0.0.9
+python-dotenv>=1.0
