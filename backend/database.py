@@ -1,9 +1,12 @@
 """MongoDB configuration and database access."""
 import os
+from dotenv import load_dotenv
 from pymongo import MongoClient
 from pymongo.database import Database
 
-MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+load_dotenv()  # 👈 IMPORTANT
+
+MONGODB_URI = os.getenv("MONGODB_URI")
 DB_NAME = os.getenv("MONGODB_DB_NAME", "hrms_lite")
 
 COLLECTION_EMPLOYEES = "employees"
